@@ -24,9 +24,9 @@
 
     | Size        | CPU performance | Memory performance |
     | ----------- | --------------- | ------------------ |
-    | `t2.micro` |Compression Rating: 3689 MIPS|                    |
-    | `t2.medium`  |                 |                    |
-    | `c5d.large` |                 |                    |
+    | `t2.micro` |Compression Rating: 3689 MIPS,Depression Rating: 3095 MIPS|Ramspeed: 10581(add),10678.59(copy),9907.11(scale),10642.41(triad)|
+    | `t2.medium`|Compression Rating: 10054 MIPS,Depression Rating: 5853 MIPS|Ramspeed: 19547.23(add),19790.74(copy),17300.29(scale),20611.8(triad)|
+    | `c5d.large`|Compression Rating: 7895 MIPS,Depression Rating: 5250 MIPS|Ramspeed: 14398.28(add),13968.11(copy),13749.27(scale),14197.5(triad)|
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
 
@@ -36,12 +36,12 @@
 
     | Type                      | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
-    | `t3.medium` - `t3.medium` |                |          |
-    | `m5.large` - `m5.large`   |                |          |
-    | `c5n.large` - `c5n.large` |                |          |
-    | `t3.medium` - `c5n.large` |                |          |
-    | `m5.large` - `c5n.large`  |                |          |
-    | `m5.large` - `t3.medium`  |                |          |
+    | `t3.medium` - `t3.medium` |  4070          | min/avg/max/mdev 0.233/0.353/0.781/0.154|
+    | `m5.large` - `m5.large`   |  4960          | min/avg/max/mdev 0.160/0.217/0.688/0.156|
+    | `c5n.large` - `c5n.large` |  4940          | min/avg/max/mdev 0.102/0.109/0.134/0.009|
+    | `t3.medium` - `c5n.large` |  4740          | min/avg/max/mdev 0.583/0.640/0.840/0.084|
+    | `m5.large` - `c5n.large`  |  4960          | min/avg/max/mdev 0.572/0.613/0.935/0.107|
+    | `m5.large` - `t3.medium`  |  4820          | min/avg/max/mdev 0.134/0.200/0.703/0.167|
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
 
@@ -49,8 +49,8 @@
 
     | Connection                | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
-    | N. Virginia - Oregon      |                |          |
-    | N. Virginia - N. Virginia |                |          |
-    | Oregon - Oregon           |                |          |
+    | N. Virginia - Oregon      |465             |min/avg/max/mdev 61.397/61.403/61.420/0.006|
+    | N. Virginia - N. Virginia |4790            |min/avg/max/mdev 0.121/0.136/0.162/0.010|
+    | Oregon - Oregon           |977             |min/avg/max/mdev 0.167/0.187/0.252/0.028|
  
     > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
