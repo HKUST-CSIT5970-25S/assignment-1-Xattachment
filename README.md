@@ -36,6 +36,7 @@
     | `c5d.large`|Compression Rating: 7895 MIPS,Depression Rating: 5250 MIPS|Ramspeed: 14398.28(add),13968.11(copy),13749.27(scale),14197.5(triad)|
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
+    > 
     > Memory performance generally improves with more vCPUs and memory, CPU performance is not always directly proportional. t2.medium performs better in both compression and decompression tasks than c5d.large despite having the same number of vCPUs.
 
 ## Question 2: Measure the EC2 Network performance
@@ -52,6 +53,9 @@
     | `m5.large` - `t3.medium`  |  4820          | min/avg/max/mdev 0.134/0.200/0.703/0.167|
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
+    >
+    > Same type connections generally provide higher TCP bandwidth and lower RTT compared to cross-type connections. This suggests better optimization for network communication between instances of the same family.
+Cross-family connections result in slightly higher RTT but still maintain high TCP bandwidth, showing that AWS is optimizing network performance between different instance families.
 
 2. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
 
@@ -62,3 +66,4 @@
     | Oregon - Oregon           |4610            |min/avg/max/mdev 0.167/0.187/0.252/0.028|
  
     > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
+    > Same region connections provide obvious higher TCP bandwidth and lower RTT compared to cross-type connections.
