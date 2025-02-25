@@ -17,6 +17,13 @@
 
     > Measurement software: Ubuntu 22.04 via the Phoronix Test Suite.
     > Used phoronix-test-suite benchmark 2502229-NE-CPUTEST1371 without setting parameters.
+    > I included compression rating and depression rating in the CPU performance whichmeasures how many million instructions per second the CPU can execute while compressing and depressing data repectively.The higher the rating, the better the CPU can perform these operations.
+    > 
+    > Ramspeed measures the performance of the RAM in terms of bandwidth.
+    > add: Measures performance when performing addition operations in memory.
+    > copy: Measures performance when copying data between memory locations.
+    > scale: Measures the performance multiplying data.
+    > triad: Involves a combination of operations, testing how the CPU handles complex memory interactions.
 
 2. (1 mark) Run your measurement tool on general purpose `t2.micro`, `t2.medium`, and `c5d.large` Linux instances, respectively, and find the performance differences among these instances. Launch all the instances in the **US East (N. Virginia)** region. Does the performance of EC2 instances increase commensurate with the increase of the number of vCPUs and memory resource?
 
