@@ -36,6 +36,7 @@
     | `c5d.large`|Compression Rating: 7895 MIPS,Depression Rating: 5250 MIPS|Ramspeed: 14398.28(add),13968.11(copy),13749.27(scale),14197.5(triad)|
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
+    > Memory performance generally improves with more vCPUs and memory, CPU performance is not always directly proportional. t2.medium performs better in both compression and decompression tasks than c5d.large despite having the same number of vCPUs.
 
 ## Question 2: Measure the EC2 Network performance
 
