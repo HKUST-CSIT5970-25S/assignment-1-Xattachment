@@ -7,7 +7,7 @@
 
 ### Name: QIAN Qixin
 ### Student Id: 21087207
-### Email: qqianac@connect.ust.hk
+### Email: qqianac@connect.ust.h
 
 ---
 
