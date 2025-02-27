@@ -61,7 +61,8 @@
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
     >
     > Same type connections generally provide higher TCP bandwidth and lower RTT compared to cross-type connections. This suggests better optimization for network communication between instances of the same family.
-Cross-family connections result in slightly higher RTT but still maintain high TCP bandwidth, showing that AWS is optimizing network performance between different instance families.
+    >
+    > Cross-family connections result in slightly higher RTT but still maintain high TCP bandwidth, showing that AWS is optimizing network performance between different instance families.
 
 2. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
 
