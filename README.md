@@ -66,4 +66,5 @@ Cross-family connections result in slightly higher RTT but still maintain high T
     | Oregon - Oregon           |4610            |min/avg/max/mdev 0.167/0.187/0.252/0.028|
  
     > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
+    > 
     > Same region connections provide obvious higher TCP bandwidth and lower RTT compared to cross-type connections.
